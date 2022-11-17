@@ -11,7 +11,7 @@ body {
 }
 
 .titulo {
-  text-align: center;
+  text-align:center;
   margin-left: 2rem;
   margin-right: 2rem;
   border: 1px solid red;
@@ -25,9 +25,11 @@ body {
   font-size: 1rem;
   margin-top: 0%;
   margin: 2rem;
-  text-align: center;
   border:1px solid red;
-  font-family: 'Roboto';
+}
+
+.cards {
+  display: flex;
 }
 
 .card {
