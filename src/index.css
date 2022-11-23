@@ -9,7 +9,7 @@
 }
 
 body {
-  background-color: whitesmoke;
+  background-color: #ffefc8;
   font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
 
@@ -28,7 +28,7 @@ a {
 /*Estilo de clases Globales*/
 
 .container {
-  max-width: 1000px;
+  max-width: 1080px;
   width: 100%;
   margin: 0 auto;
 }
@@ -50,25 +50,30 @@ a {
 }
 
 header {
-  position: relative;
-  top: 0;
   min-height: 75px;
-  padding: 0 20px;
+  padding: 20px;
   display: flex;
   justify-content: space-around;
   align-items: center;
   background-color: #eee;
+  box-sizing: border-box;
+  border: rebeccapurple solid 1px;
 }
 
 @media (max-width:600px) {
   header {
-    flex-wrap: wrap;
+    flex-wrap: wrap;;
   }
 }
 
-.logo {
-  width: 10vw;
-}
+/*.logo {
+  position: relative;
+  padding-top: 10px;
+
+  width: 360px;
+  
+  border: rebeccapurple solid 1px;
+}*/
 
 @media (max-width: 650px) {
   .logo {
@@ -79,14 +84,14 @@ header {
 }
 
 .logo > img {
-  width: 100%;
-  height: 100%;
-  max-width: 300px;
   display: flex;
   justify-content: center;
   align-items: center;
   text-align: center;
-  margin-left: 20px;
+  width: 250px; 
+  height: 100px; 
+  object-fit: cover;
+  border: solid red 1px;
 }
 
 @media(max-width: 650px) {
@@ -96,7 +101,9 @@ header {
 }
 
 nav {
-  font-weight: 400;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  font-size: large;
+  font-weight: 500;
 }
 
 @media (max-width: 650px) {
@@ -129,6 +136,7 @@ nav > ul {
 }
 
 #hero {
+  padding: 25px;
   display: flex;
  flex-direction: column;
  align-items: center;
@@ -156,7 +164,7 @@ nav > ul {
   height: 30px;
   margin: 15px 0;
   border: 0;
-  background-color: #f1c40f;
+  background-color: #ffdc89;
 }
 
 #hero input[type='submit']:hover {
@@ -171,7 +179,7 @@ nav > ul {
 }
 
 #features {
-  margin-top: 30px;
+  margin: 30px;
 }
 
 #features .icon {
@@ -212,10 +220,10 @@ nav > ul {
   }
 }
 
-#how-it.works {
+#how-it-works {
   margin-top: 50px;
   display: flex;
-  justify-content: center;
+  justify-content: space-around;
 }
 
 #how-it-works > iframe {
@@ -269,12 +277,12 @@ nav > ul {
 .product > button {
   border: 0;
   margin: 15px 0;
-  background-color: #f1c40f;
+  background-color: #ffdc89;
   font-weight: 400;
 }
 
 .product > button:hover {
-  background-color: orange;
+  background:  #ffbc12; ;
   transition:  background-color 1s;
 }
 
@@ -293,7 +301,7 @@ nav > ul {
 
 footer {
   margin-top: 30px;
-  background-color: #ddd;
+  background-color: #635f5c;
   padding: 20px;
 }
 
@@ -311,5 +319,5 @@ footer > span {
   display:  flex;
   justify-content: flex-end;
   font-size: 0.9em;
-  color: #444;
+  color: white;
   }
