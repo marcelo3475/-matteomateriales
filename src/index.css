@@ -1,6 +1,12 @@
-/*Estilo general de elementos*/
-
+@import "https://fonts.googleapis.com/css?family=Roboto:400,100,100italic,300,300italic,400italic,500,500italic,700,700italic,900,900italic&subset=latin,cyrillic";
 @import 'https://fonts.googleapis.com/css?family=Lato:400,700';
+.color1 {color: #c7a878;}
+.color2 {color: #c6bfa4;}
+.color3 {color: #003c74;}
+.color4 {color: #4898bd;}
+.color5 {color: #e4ffff;}
+
+/*Estilo general de elementos*/
 
 * {
   margin: 0;
@@ -8,13 +14,16 @@
   box-sizing: content-box;
 }
 
-body {
-  background-color: #ffefc8;
+html, body {
+  background-color: #e4ffff;
   font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  position: relative;
+  min-height: 100%;
+  height: 100%;
 }
 
 #page-wrapper {
-  position: relative;
+  display: block;
 }
 
 li {
@@ -33,17 +42,7 @@ a {
   margin: 0 auto;
 }
 
-.btn {
-  padding: 0 20px;
-  height: 40px;
-  font-size: 1em;
-  font-weight: 900;
-  text-transform: uppercase;
-  border: 3px black solid;
-  border-radius: 2px;
-  background:#4c5c68;
-  cursor: pointer;
-}
+
 
 .grid {
   display: flex;
@@ -55,16 +54,14 @@ header {
   display: flex;
   justify-content: space-around;
   align-items: center;
-  background-color: #eee;
-  box-sizing: border-box;
-  border: rebeccapurple solid 1px;
+  background-color: #4898bd;
 }
 
-@media (max-width:600px) {
+/*@media (max-width:600px) {
   header {
     flex-wrap: wrap;;
   }
-}
+}*/
 
 /*.logo {
   position: relative;
@@ -75,13 +72,13 @@ header {
   border: rebeccapurple solid 1px;
 }*/
 
-@media (max-width: 650px) {
+/*@media (max-width: 650px) {
   .logo {
     margin-top: 15px;
     width: 100%;
     position: relative;
   }
-}
+}*/
 
 .logo > img {
   display: flex;
@@ -94,19 +91,20 @@ header {
   border: solid red 1px;
 }
 
-@media(max-width: 650px) {
+/*@media(max-width: 650px) {
   .logo > img {
     margin: 0 auto;
   }
-}
+}*/
 
 nav {
   font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
   font-size: large;
   font-weight: 500;
+  border: #c6bfa4 1px solid;
 }
 
-@media (max-width: 650px) {
+/*@media (max-width: 650px) {
   nav {
     margin-top: 10px;
     width: 100%;
@@ -116,7 +114,7 @@ nav {
     text-align: center;
     padding:  0 50px;
   }
-}
+}*/
 
 nav li {
   padding-bottom: 5px;
@@ -127,59 +125,17 @@ nav > ul {
   display: flex;
   flex-direction: row;
   justify-content: space-around;
+  overflow: hidden;
 }
 
-@media (max-width: 650px) {
+/*@media (max-width: 650px) {
   nav > ul{
     flex-direction: column;
   }
-}
+}*/
 
-#hero {
-  padding: 25px;
-  display: flex;
- flex-direction: column;
- align-items: center;
- justify-content: center;
- text-align: center;
- height: 200px;
- margin-top: 50px; 
-}
-
-#hero > h2 {
-  margin-top: 50px;
-  margin-bottom: 20px;
-  word-wrap: break-word;
-}
-
-#hero input[type='email'] {
-  max-width: 275px;
-  width: 100%;
-  padding: 5px;
-}
-
-#hero input[type='submit'] {
-  max-width: 150px;
-  width: 100%;
-  height: 30px;
-  margin: 15px 0;
-  border: 0;
-  background-color: #ffdc89;
-}
-
-#hero input[type='submit']:hover {
-  background-color: orange;
-  transition: background-color 1s;
-}
-
-@media (max-width: 650px) {
-  #hero {
-    margin-top: 120px;
-  }
-}
-
-#features {
-  margin: 30px;
+#active {
+  background-color: #003c74;
 }
 
 #features .icon {
@@ -191,11 +147,7 @@ nav > ul {
   color: #4c5c68;
 }
 
-@media (max-width: 550px) {
-  #features .icon {
-    display: none
-  }
-}
+
 
 #features .desc {
   display:flex;
@@ -203,21 +155,6 @@ nav > ul {
   height: 125px;
   width: 80vw;
   padding: 5px;
-}
-
-@media (max-width: 550px) {
-  #features .desc {
-    width: 100%;
-    text-align: center;
-    padding: 0;
-
-  }
-}
-
-@media (max-width: 650px) {
-  #features {
-    margin-top: 0;
-  }
 }
 
 #how-it-works {
@@ -232,10 +169,11 @@ nav > ul {
 }
 
 #pricing {
-  margin-top: 60px;
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
+  padding: 20px;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  grid-gap: 20px;
+  align-items: stretch;
 }
 
 .product {
@@ -250,7 +188,7 @@ nav > ul {
 }
 
 .product > .level {
-  background-color: #4c5c68;
+  background-color: #4898bd;
   color: black;
   padding: 15px 0;
   width: 100%;
@@ -274,23 +212,57 @@ nav > ul {
   padding: 5px 0;
 }
 
-.product > button {
-  border: 0;
-  margin: 15px 0;
-  background-color: #ffdc89;
-  font-weight: 400;
-}
 
-.product > button:hover {
-  background:  #ffbc12; ;
-  transition:  background-color 1s;
-}
+.btn {
+  position: relative;
+  font-size: 17px;
+  text-transform: uppercase;
+  text-decoration: none;
+  padding: 1em 2.5em;
+  margin-bottom: 20px;
+  display: inline-block;
+  border-radius: 6em;
+  transition: all .2s;
+  border: none;
+  font-family: inherit;
+  font-weight: 500;
+  color: black;
+  background-color: white;
+  border: #000 1px solid;
+ }
+ 
+ .btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+ }
+ 
+ .btn:active {
+  transform: translateY(-1px);
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+ }
+ 
+ .btn::after {
+  content: "";
+  display: inline-block;
+  height: 100%;
+  width: 100%;
+  border-radius: 100px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  transition: all .4s;
+ }
+ 
+ .btn::after {
+  background-color: #fff;
+ }
+ 
+ .btn:hover::after {
+  transform: scaleX(1.4) scaleY(1.6);
+  opacity: 0;
+ }
 
-@media (max-width: 800px) {
-  #pricing {
-    flex-direction: column;
-  }
-}
 
 .product {
   max-width: 300px;
