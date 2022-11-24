@@ -8,7 +8,11 @@
 
 /*Estilo general de elementos*/
 
-
+* {
+  box-sizing: border-box;
+  border: solid red 1px;
+  background-color: #e4ffff;
+}
 
 html, body {
   background-color: #e4ffff;
@@ -33,6 +37,10 @@ li {
 a {
   color: #000;
 }
+ b {
+  font-family: "Roboto",sans-serif !important;
+  font-weight: bold;
+ }
 
 /*Estilo de clases Globales*/
 
@@ -188,37 +196,19 @@ nav > ul {
     flex-direction: column;
   }
 }*/
+.datos{
+  border: red solid 1px;
+  width: fit-content;
+}
 
-
-#features .icon {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  height: 125px;
-  width: 20vw;
-  color: #4c5c68;
+.grid {
+position: relative;
+min-height: 1px;
+padding-right: 15px;
+padding-left: 15px;
 }
 
 
-
-#features .desc {
-  display:flex;
-  flex-direction: column;
-  height: 125px;
-  width: 80vw;
-  padding: 5px;
-}
-
-#how-it-works {
-  margin-top: 50px;
-  display: flex;
-  justify-content: space-around;
-}
-
-#how-it-works > iframe {
-  max-width: 720px;
-  width:100%;
-}
 
 #pricing {
   padding: 20px;
